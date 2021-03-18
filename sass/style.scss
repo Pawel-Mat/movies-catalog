@@ -16,16 +16,19 @@ $font-text: 'Source Sans Pro', sans-serif;
 }
 
 body {
-  background: $color-light;
+  background-image: url("../images/Background-1.jpg");
+  background-size: cover;
+  background-attachment: fixed;
   font-family: $font-text;
   color: $color-dark;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.7;
+
 }
 
 .container {
-  max-width: 1140px;
+  max-width: 1240px;
   margin: 0 auto;
 }
 
@@ -40,6 +43,7 @@ body {
     color: lighten($color-dark, 20%);
   }
 }
+
 
 /* Layout */
 
@@ -62,12 +66,19 @@ body {
   padding: 40px;
   border: 1px solid $color-dark;
   border-radius: 5px;
+  background-color: white;
+  background: linear-gradient(
+    to right bottom,
+    (rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5))
+  );
+  backdrop-filter: blur(4px);
 }
 
 /* Logo */
 
 .logo {
   font-family: $font-logo;
+  color: $color-light;
   font-weight: 400;
   font-size: 104px;
   line-height: 1;
