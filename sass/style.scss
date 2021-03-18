@@ -44,6 +44,9 @@ body {
   }
 }
 
+.logo {
+  color: $color-light;
+}
 
 /* Layout */
 
@@ -91,8 +94,17 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  list-style: none;
+  font-size: 1.2rem;
   .active {
     font-weight: bold;
+    color: rgb(17, 0, 255);
+  }
+  a {
+    text-decoration: none;
+  }
+  :hover {
+    color: rgb(17, 0, 255);
   }
 }
 
@@ -113,9 +125,14 @@ body {
 /* Post */
 
 .post {
-  display: none;
+  display: block;
+  position:absolute;
+  opacity: 0;
+  transition: 0.5s;
   &.active {
-    display: block;
+    opacity: 1;
+    transition: 0.5s;
+    z-index: 1;
   }
 }
 

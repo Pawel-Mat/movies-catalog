@@ -34,6 +34,10 @@ body {
   color: #777777;
 }
 
+.logo {
+  color: #fff;
+}
+
 /* Layout */
 .wrapper {
   display: -ms-flexbox;
@@ -78,10 +82,21 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  list-style: none;
+  font-size: 1.2rem;
 }
 
 .list .active {
   font-weight: bold;
+  color: #1100ff;
+}
+
+.list a {
+  text-decoration: none;
+}
+
+.list :hover {
+  color: #1100ff;
 }
 
 .list-horizontal li {
@@ -95,11 +110,16 @@ body {
 
 /* Post */
 .post {
-  display: none;
+  display: block;
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s;
 }
 
 .post.active {
-  display: block;
+  opacity: 1;
+  transition: 0.5s;
+  z-index: 1;
 }
 
 .post-director {
